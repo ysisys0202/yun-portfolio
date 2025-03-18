@@ -1,0 +1,12 @@
+html,
+body {
+  @include text-style(text-1);
+  font-family: $font-ko;
+  color: $gray-primary;
+  background-color: $beige;
+}
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+}
