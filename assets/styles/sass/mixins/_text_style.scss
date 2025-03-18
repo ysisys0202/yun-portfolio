@@ -1,0 +1,29 @@
+@mixin text-style($size, $color: false) {
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  @if ($size == "title-1") {
+    font-size: $typography-title-1;
+    font-weight: 700;
+  }
+  @if ($size == "title-2") {
+    font-size: $typography-title-2;
+    font-weight: 700;
+  }
+  @if ($size == "title-3") {
+    font-size: $typography-title-3;
+    font-weight: 700;
+  }
+  @if ($size == "title-4") {
+    font-size: $typography-title-4;
+    font-weight: 700;
+  }
+  @if ($size == "text-1") {
+    font-size: $typography-text-1;
+  }
+  @if ($size == "text-2") {
+    font-size: $typography-text-2;
+  }
+  @if (type-of($color) == color) {
+    color: $color;
+  }
+}
