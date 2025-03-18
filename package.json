@@ -1,0 +1,12 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "FE\t이윤슬 포트폴리오",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass --watch assets/styles/sass:assets/styles/css"
+  },
+  "author": "이윤슬",
+  "license": "ISC"
+}
