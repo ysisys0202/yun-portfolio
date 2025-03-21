@@ -1,0 +1,39 @@
+.blog-card {
+  a {
+    @extend %card-base;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
+    border: 1px solid $blue;
+    color: $blue;
+    transition: all 300ms ease-in-out;
+  }
+
+  i {
+    font-size: 40px;
+  }
+
+  &-title {
+    @include line-clamp(1);
+    font-weight: 500;
+  }
+  &-description {
+    @include text-style(text-2);
+    @include line-clamp(2);
+
+    margin-top: 8px;
+  }
+  .created-at {
+    @include text-style(text-3);
+  }
+  &:hover {
+    a {
+      background-color: $blue;
+      color: $beige;
+    }
+    i {
+      animation: icon-rotate 2s linear infinite;
+    }
+  }
+}

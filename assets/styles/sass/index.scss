@@ -12,11 +12,14 @@
 @import "./base/fonts";
 
 @import "./components/icon";
+@import "./components/card";
 @import "./components/badge";
 @import "./components/about-item";
+@import "./components/blog-card";
 @import "./components/skill-badge";
 @import "./components/main-text";
 @import "./animations/text.scss";
+@import "./animations/icon-rotate";
 
 @import "./layouts/main.scss";
 @import "./layouts/section.scss";
@@ -24,3 +27,4 @@
 @import "./sections/intro";
 @import "./sections/about";
 @import "./sections/skills";
+@import "./sections/blog";

@@ -1,0 +1,17 @@
+.blog {
+  &-intro {
+    display: flex;
+    align-items: end;
+  }
+  .view-more {
+    display: block;
+    margin-left: auto;
+    width: fit-content;
+  }
+  .blog-card-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 80px;
+  }
+}
