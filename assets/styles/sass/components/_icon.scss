@@ -1,0 +1,51 @@
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "portfolio" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow:before {
+  content: "\e900";
+}
+.icon-cogwheel:before {
+  content: "\e901";
+}
+.icon-css:before {
+  content: "\e902";
+}
+.icon-html:before {
+  content: "\e903";
+}
+.icon-internet:before {
+  content: "\e904";
+}
+.icon-javascript:before {
+  content: "\e905";
+}
+.icon-next:before {
+  content: "\e906";
+}
+.icon-paint:before {
+  content: "\e907";
+}
+.icon-react-query:before {
+  content: "\e908";
+}
+.icon-react:before {
+  content: "\e909";
+}
+.icon-twinkle:before {
+  content: "\e90a";
+}
+.icon-typescript:before {
+  content: "\e90b";
+}
