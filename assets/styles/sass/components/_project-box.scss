@@ -1,0 +1,45 @@
+.project-box {
+  padding: 80px 60px;
+  max-width: $breakpoint-lg;
+  border-radius: $radius-lg;
+
+  background-color: $beige;
+
+  &-title {
+    @include text-style(title-4);
+  }
+  .project-detail {
+    margin-top: 20px;
+  }
+  .project-detail-list {
+    &:not(:first-of-type) {
+      margin-top: 32px;
+    }
+  }
+  .project-detail-item {
+    &:not(:first-of-type) {
+      margin-top: 16px;
+    }
+    h5 {
+      a {
+        @include text-style(text-3);
+        text-decoration: underline;
+      }
+    }
+    ul {
+      margin-top: 8px;
+      padding-left: 8px;
+    }
+    li {
+      @include text-style(text-2);
+      &:not(:first-of-type) {
+        margin-top: 8px;
+      }
+    }
+  }
+  .project-detail-title {
+    margin-bottom: 16px;
+    font-family: $font-en;
+    font-weight: 700;
+  }
+}

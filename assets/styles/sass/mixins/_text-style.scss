@@ -23,6 +23,9 @@
   @if ($size == "text-2") {
     font-size: $typography-text-2;
   }
+  @if ($size == "text-3") {
+    font-size: $typography-text-3;
+  }
   @if (type-of($color) == color) {
     color: $color;
   }

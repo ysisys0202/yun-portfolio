@@ -314,6 +314,51 @@ i {
   animation: icon-rotate 2s linear infinite;
 }
 
+.project-box {
+  padding: 80px 60px;
+  max-width: 1200px;
+  border-radius: 24px;
+  background-color: #fff7e3;
+}
+.project-box-title {
+  line-height: 1.4;
+  letter-spacing: -0.005;
+  font-size: 20px;
+  font-weight: 700;
+}
+.project-box .project-detail {
+  margin-top: 20px;
+}
+.project-box .project-detail-list:not(:first-of-type) {
+  margin-top: 32px;
+}
+.project-box .project-detail-item:not(:first-of-type) {
+  margin-top: 16px;
+}
+.project-box .project-detail-item h5 a {
+  line-height: 1.4;
+  letter-spacing: -0.005;
+  font-size: 14px;
+  text-decoration: underline;
+}
+.project-box .project-detail-item ul {
+  margin-top: 8px;
+  padding-left: 8px;
+}
+.project-box .project-detail-item li {
+  line-height: 1.4;
+  letter-spacing: -0.005;
+  font-size: 16px;
+}
+.project-box .project-detail-item li:not(:first-of-type) {
+  margin-top: 8px;
+}
+.project-box .project-detail-title {
+  margin-bottom: 16px;
+  font-family: "Alfa Slab One", serif;
+  font-weight: 700;
+}
+
 .skill-badge {
   line-height: 1.4;
   letter-spacing: -0.005;
@@ -466,6 +511,16 @@ main {
 }
 .skills .description-item:not(:first-of-type) {
   margin-top: 8px;
+}
+
+.projects {
+  background-color: #3a6ecf;
+}
+.projects .section-title {
+  color: #ffd340;
+}
+.projects .project-box:not(:first-of-type) {
+  margin-top: 80px;
 }
 
 .blog-intro {
