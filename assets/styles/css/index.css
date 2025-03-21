@@ -149,6 +149,38 @@ body {
   margin: 0 auto;
 }
 
+.paper-plane {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  transform: rotate(180deg);
+  offset-distance: 100%;
+  offset-rotate: auto 90deg;
+  offset-path: path("m523.89,4304.71v-102.65c0-380.2-349.01-699.56-349.01-699.56-444.83-376.4,250.93-486.65,250.93-486.65,444.83-102.65,557.68-250.93,557.68-250.93,283.93-319.37-486.96-646.34-486.96-646.34-258.91-112.16-314.04-296.55-314.04-296.55C-5.24,1295.45,395.39,1206.1,502.03,1255.07c65,29.84,105.64,109.85,90,179.91-35.06,157.03-234.66,151.32-234.66,151.32-287.05,0-340.67-193.9-340.67-193.9-85.15-285.15,215.21-534.18,215.21-534.18,309.81-245.7,291.98-636.53,291.98-636.53V0");
+}
+
+.track {
+  position: absolute;
+  left: 50vw;
+  top: 0;
+  width: 1048px;
+  transform: translateX(-50%);
+}
+
+.flight-path {
+  stroke: white;
+  stroke-width: 7px;
+  stroke-dasharray: 14px;
+  fill: none;
+}
+
+.scroll-timeline {
+  position: relative;
+  height: 4315px;
+  margin: 200px 0;
+}
+
 @font-face {
   font-family: "portfolio";
   src: url("../../fonts/portfolio.eot");
@@ -214,6 +246,48 @@ i {
 
 .icon-typescript:before {
   content: "\e90b";
+}
+
+.skill-badge {
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+
+.about-item {
+  max-width: 600px;
+}
+.about-item-title {
+  line-height: 1.4;
+  letter-spacing: -0.005;
+  font-size: 20px;
+  font-weight: 700;
+  font-weight: 400;
+}
+.about-item-description {
+  margin-top: 20px;
+}
+
+.skill-badge {
+  line-height: 1.4;
+  letter-spacing: -0.005;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #3a6ecf;
+  color: #fff7e3;
+  font-weight: 400;
+}
+.skill-badge i {
+  font-size: 18px;
+}
+
+.main-text {
+  line-height: 1.4;
+  letter-spacing: -0.005;
+  font-size: 24px;
+  font-weight: 700;
+  font-weight: 400;
 }
 
 .animated-text span {
@@ -305,6 +379,38 @@ main {
 }
 .intro.is-loaded .intro-description {
   opacity: 1;
+}
+
+.about-item {
+  margin-top: 120px;
+}
+.about-item:nth-of-type(2n) {
+  margin-left: auto;
+}
+
+.skills .section-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills .description-list {
+  margin: 40px auto 0;
+}
+.skills .description-item {
+  line-height: 1.4;
+  letter-spacing: -0.005;
+  font-size: 18px;
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  max-width: 900px;
+  color: #3a6ecf;
+}
+.skills .description-item i {
+  margin-top: 4px;
+}
+.skills .description-item:not(:first-of-type) {
+  margin-top: 8px;
 }
 
 /*# sourceMappingURL=index.css.map */

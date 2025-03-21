@@ -1,0 +1,13 @@
+.skill-badge {
+  @extend %badge-base;
+  @include text-style(text-2);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: $blue;
+  color: $beige;
+  font-weight: 400;
+  i {
+    font-size: 18px;
+  }
+}
