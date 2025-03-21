@@ -1,0 +1,12 @@
+.section {
+  padding: 80px 20px;
+  &-title {
+    @include text-style(title-1, $blue);
+    font-family: $font-en;
+    text-align: center;
+  }
+  &-body {
+    margin: 80px auto 0;
+    max-width: $breakpoint-lg;
+  }
+}
