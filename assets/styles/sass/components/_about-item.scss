@@ -1,0 +1,10 @@
+.about-item {
+  max-width: 600px;
+  &-title {
+    @include text-style(title-4);
+    font-weight: 400;
+  }
+  &-description {
+    margin-top: 20px;
+  }
+}

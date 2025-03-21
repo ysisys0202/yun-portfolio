@@ -12,10 +12,12 @@
 @import "./base/fonts";
 
 @import "./components/icon";
-
+@import "./components/about-item";
+@import "./components/main-text";
 @import "./animations/text.scss";
 
 @import "./layouts/main.scss";
 @import "./layouts/section.scss";
 
 @import "./sections/intro";
+@import "./sections/about";
