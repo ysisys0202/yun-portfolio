@@ -22,11 +22,10 @@ export const projectsAnimation = () => {
   });
 
   gsap.utils.toArray(".project-box").forEach((projectBox) => {
-    gsap.fromTo(
+    gsap.to(
       projectBox,
-      { scale: 0.8 },
+
       {
-        scale: 1,
         scrollTrigger: {
           trigger: projectBox,
           start: "top bottom",
@@ -34,7 +33,6 @@ export const projectsAnimation = () => {
           scrub: true,
           onUpdate: (self) => {
             const progress = self.progress;
-
             let scale;
             let opacity;
 
