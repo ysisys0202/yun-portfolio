@@ -27,4 +27,7 @@ export default class TextEffect {
   bounce() {
     this.element.classList.add("bounce");
   }
+  disableBounce() {
+    this.element.classList.remove("bounce");
+  }
 }

@@ -2,9 +2,63 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TextEffect from "../effects/textEffect.js";
 
-export const introAnimation = () => {
+const resetAnimation = () => {
+  gsap.killTweensOf(".intro");
+  gsap.killTweensOf(".intro-header");
+  gsap.killTweensOf(".intro-body");
+  gsap.killTweensOf(".intro-description");
+};
+
+const makeTextEffectTitle = () => {
+  let introTitle;
   const intro = document.querySelector("section.intro");
-  const introTitle = new TextEffect(intro.querySelector(".intro-title"));
+
+  return () => {
+    if (!introTitle) {
+      introTitle = new TextEffect(intro.querySelector(".intro-title"));
+    }
+
+    return introTitle;
+  };
+};
+
+const initTextEffectTitle = makeTextEffectTitle();
+
+const introMobileAnimation = () => {
+  const introTitle = initTextEffectTitle();
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const introTimeline = gsap.timeline();
+
+  introTimeline
+    .to(".intro", {
+      duration: 2.6,
+      onStart: () => {
+        introTitle.disableBounce();
+        setTimeout(() => {
+          introTitle.bounce();
+        });
+      },
+    })
+    .fromTo(
+      ".intro-description",
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 1,
+        ease: "power1.inOut",
+      }
+    )
+    .fromTo(
+      ".intro-body",
+      { y: 20, opacity: 0 },
+      { opacity: 1, ease: "power1.inOut" }
+    );
+};
+
+const introDesktopAnimation = () => {
+  const introTitle = initTextEffectTitle();
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -16,11 +70,15 @@ export const introAnimation = () => {
     end: "bottom",
     scrub: true,
   };
+
   introTimeline
     .to(".intro", {
       duration: 2.6,
       onStart: () => {
-        introTitle.bounce();
+        introTitle.disableBounce();
+        setTimeout(() => {
+          introTitle.bounce();
+        });
         document.body.classList.add("no-scroll");
       },
     })
@@ -71,4 +129,14 @@ export const introAnimation = () => {
         }
       );
     });
+};
+
+export const introAnimation = () => {
+  resetAnimation();
+
+  if (window.innerWidth < 1080) {
+    introMobileAnimation();
+  } else {
+    introDesktopAnimation();
+  }
 };
