@@ -1,12 +1,17 @@
 .section {
   padding: 120px 20px;
   &-title {
-    @include text-style(title-1);
+    @include text-style(title-3);
     font-family: $font-en;
     text-align: center;
   }
   &-body {
     margin: 80px auto 0;
     max-width: $breakpoint-lg;
+  }
+  @include responsive(md) {
+    &-title {
+      @include text-style(title-1);
+    }
   }
 }

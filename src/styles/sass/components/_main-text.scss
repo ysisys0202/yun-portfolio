@@ -1,4 +1,7 @@
 .main-text {
-  @include text-style(title-3);
+  @include text-style(title-4);
   font-weight: 400;
+  @include responsive(lg) {
+    @include text-style(title-3);
+  }
 }

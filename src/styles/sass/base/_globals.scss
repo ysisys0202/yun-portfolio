@@ -10,9 +10,12 @@
 
 html,
 body {
-  @include text-style(text-1);
+  @include text-style(text-2);
   font-family: $font-ko;
   color: var(--color-text);
+  @include responsive(md) {
+    @include text-style(text-1);
+  }
 }
 
 body {
