@@ -2,6 +2,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TextEffect from "../effects/textEffect.js";
 
+const route = document.querySelector(".route");
+
 const resetAnimation = () => {
   gsap.killTweensOf(".intro");
   gsap.killTweensOf(".intro-header");
@@ -36,6 +38,7 @@ const introMobileAnimation = () => {
       duration: 2.6,
       onStart: () => {
         introTitle.disableBounce();
+        route.classList.add("is-hide");
         setTimeout(() => {
           introTitle.bounce();
         });
@@ -53,7 +56,13 @@ const introMobileAnimation = () => {
     .fromTo(
       ".intro-body",
       { y: 20, opacity: 0 },
-      { opacity: 1, ease: "power1.inOut" }
+      {
+        opacity: 1,
+        ease: "power1.inOut",
+        onComplete: () => {
+          route.classList.remove("is-hide");
+        },
+      }
     );
 };
 
@@ -79,7 +88,8 @@ const introDesktopAnimation = () => {
         setTimeout(() => {
           introTitle.bounce();
         });
-        document.body.classList.add("no-scroll");
+        route.classList.add("is-hide");
+        // document.body.classList.add("no-scroll");
       },
     })
     .fromTo(
@@ -102,6 +112,7 @@ const introDesktopAnimation = () => {
         duration: 1,
         ease: "power1.inOut",
         onComplete: () => {
+          route.classList.remove("is-hide");
           document.body.classList.remove("no-scroll");
         },
       }

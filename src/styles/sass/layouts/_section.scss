@@ -1,4 +1,6 @@
 .section {
+  position: relative;
+  z-index: 40;
   padding: 120px 20px;
   &-title {
     @include text-style(title-3);
