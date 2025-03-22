@@ -1,4 +1,4 @@
-import TextEffect from "./textEffect.js";
+import TextEffect from "./effects/textEffect.js";
 
 const intro = document.querySelector(".intro");
 const introTitle = new TextEffect(intro.querySelector(".intro-title"));
