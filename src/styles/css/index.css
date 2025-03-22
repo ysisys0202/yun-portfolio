@@ -421,10 +421,12 @@ main {
 .intro-header {
   flex: 1;
   padding: 40px 20px;
+  transform: translateX(50%);
 }
 .intro-body {
   flex: 1;
   opacity: 0;
+  transform: translateX(100%);
 }
 .intro-body img {
   width: 100%;
