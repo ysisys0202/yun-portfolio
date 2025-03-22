@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body,
 div,
@@ -148,9 +152,17 @@ html,
 body {
   line-height: 1.4;
   letter-spacing: -0.005;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Noto Sans KR", serif;
   color: var(--color-text);
+}
+@media screen and (min-width: 768px) {
+  html,
+  body {
+    line-height: 1.4;
+    letter-spacing: -0.005;
+    font-size: 18px;
+  }
 }
 
 body {
@@ -254,6 +266,9 @@ i {
   margin-top: 20px;
 }
 
+.blog-card {
+  background-color: var(--color-bg);
+}
 .blog-card a {
   display: flex;
   align-items: center;
@@ -297,8 +312,8 @@ i {
 }
 
 .project-box {
-  padding: 80px 60px;
-  max-width: 1200px;
+  padding: 40px 30px;
+  max-width: 1080px;
   border-radius: 24px;
   background-color: var(--color-text);
   color: var(--color-bg);
@@ -341,11 +356,16 @@ i {
   font-family: "Alfa Slab One", serif;
   font-weight: 700;
 }
+@media screen and (min-width: 768px) {
+  .project-box {
+    padding: 80px 60px;
+  }
+}
 
 .skill-badge {
   line-height: 1.4;
   letter-spacing: -0.005;
-  font-size: 16px;
+  font-size: 14px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -354,15 +374,34 @@ i {
   font-weight: 400;
 }
 .skill-badge i {
-  font-size: 18px;
+  font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  .skill-badge {
+    line-height: 1.4;
+    letter-spacing: -0.005;
+    font-size: 16px;
+  }
+  .skill-badge i {
+    font-size: 18px;
+  }
 }
 
 .main-text {
   line-height: 1.4;
   letter-spacing: -0.005;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   font-weight: 400;
+}
+@media screen and (min-width: 1080px) {
+  .main-text {
+    line-height: 1.4;
+    letter-spacing: -0.005;
+    font-size: 24px;
+    font-weight: 700;
+    font-weight: 400;
+  }
 }
 
 .bounce-text span {
@@ -400,51 +439,126 @@ main {
 }
 
 .section {
+  position: relative;
+  z-index: 40;
   padding: 120px 20px;
 }
 .section-title {
   line-height: 1.4;
   letter-spacing: -0.005;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 700;
   font-family: "Alfa Slab One", serif;
   text-align: center;
 }
 .section-body {
   margin: 80px auto 0;
+  max-width: 1080px;
+}
+@media screen and (min-width: 768px) {
+  .section-title {
+    line-height: 1.4;
+    letter-spacing: -0.005;
+    font-size: 36px;
+    font-weight: 700;
+  }
+}
+
+.route {
+  position: relative;
+  top: -120px;
+  margin: 0 auto;
   max-width: 1200px;
+  transition: opacity 200ms ease;
+}
+.route.is-hide {
+  opacity: 0;
+}
+.route .airplane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 40px;
+  offset-distance: 0%;
+  offset-rotate: auto 45deg;
+  offset-path: path("M600.329 0V59C599.995 74.3333 610.729 106.6 656.329 113C713.329 121 931.829 133.5 982.829 387.5C1033.83 641.5 744.329 825.5 540.329 912C336.329 998.5 265.329 1336 540.329 1423.5C815.329 1511 854.329 1674 628.829 1746.5C403.329 1819 164.829 1817.5 87.3286 2084.5C9.8286 2351.5 267.829 2521 356.329 2564C444.829 2607 801.828 2840.5 837.328 3072.5C872.828 3304.5 598.328 3529 375.828 3652C153.328 3775 163.328 4173.5 472.328 4324C781.328 4474.5 859.828 4776.5 832.328 4922C804.828 5067.5 524.328 5307 401.328 5384.5C278.328 5462 160.828 5575 176.828 5761.5C192.828 5948 306.328 6044.5 595.328 6134C884.328 6223.5 1034.5 6211 1054 6378.5C1082.64 6624.5 788 6637 788 6637");
+  transition: transform 200ms ease-in-out;
+}
+.route .airplane.is-up {
+  transform: rotate(180deg);
+}
+.route .airplane path {
+  fill: var(--color-text);
+}
+.route .airplane-first {
+  offset-distance: 0%;
+}
+.route .airplane-last {
+  offset-distance: 60%;
+}
+.route .path {
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);
+  opacity: 0.4;
+}
+.route .path path {
+  stroke-width: 1px;
+  stroke-dasharray: 10px;
+  stroke: var(--color-text);
+  width: 80%;
 }
 
 .intro {
   display: flex;
-}
-.intro-header {
-  flex: 1;
-  padding: 40px 20px;
-  transform: translateX(50%);
+  flex-direction: column;
+  gap: 80px;
+  text-align: center;
 }
 .intro-body {
-  flex: 1;
   opacity: 0;
-  transform: translateX(100%);
 }
 .intro-body img {
   width: 100%;
-  height: 100vh;
+  height: 40vh;
   object-fit: cover;
 }
 .intro-title {
-  margin-top: 160px;
+  margin-top: 80px;
   font-family: "Alfa Slab One", serif;
-  font-size: 3vw;
-  text-align: center;
+  font-size: 6vw;
 }
 .intro-description {
-  line-height: 1.4;
-  letter-spacing: -0.005;
-  font-size: 18px;
-  text-align: center;
-  margin-top: 240px;
+  margin-top: 80px;
+}
+@media screen and (min-width: 1080px) {
+  .intro {
+    flex-direction: row;
+    gap: 0;
+  }
+  .intro-header {
+    flex-shrink: 0;
+    width: 50%;
+    padding: 40px 20px;
+    transform: translateX(50%);
+  }
+  .intro-body {
+    flex-shrink: 0;
+    width: 50%;
+    transform: translateX(100%);
+  }
+  .intro-body img {
+    height: 100vh;
+  }
+  .intro-title {
+    margin-top: 160px;
+    font-size: 3vw;
+  }
+  .intro-description {
+    margin-top: 240px;
+  }
 }
 
 .about {
@@ -463,13 +577,15 @@ main {
   flex-direction: column;
   align-items: center;
 }
+.skills .badge-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 .skills .description-list {
   margin: 40px auto 0;
 }
 .skills .description-item {
-  line-height: 1.4;
-  letter-spacing: -0.005;
-  font-size: 18px;
   display: flex;
   align-items: start;
   gap: 8px;
@@ -481,9 +597,11 @@ main {
 .skills .description-item:not(:first-of-type) {
   margin-top: 8px;
 }
-
 .projects .section-title {
   color: #ffd340;
+}
+.projects .project-box {
+  transform: scale(0.8);
 }
 .projects .project-box:not(:first-of-type) {
   margin-top: 80px;
@@ -491,18 +609,41 @@ main {
 
 .blog-intro {
   display: flex;
-  align-items: end;
+  flex-direction: column;
+  background-color: var(--color-bg);
 }
 .blog .view-more {
-  display: block;
-  margin-left: auto;
-  width: fit-content;
+  margin-top: 24px;
+  opacity: 0.8;
+}
+.blog .view-more i {
+  display: inline-block;
+  transition: transform 200ms ease-in-out;
+}
+.blog .view-more:hover i {
+  transform: translateX(4px);
 }
 .blog .blog-card-area {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 12px;
-  margin-top: 80px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .blog-intro {
+    flex-direction: row;
+    align-items: end;
+  }
+  .blog .view-more {
+    display: block;
+    margin-top: 0;
+    margin-left: auto;
+    width: fit-content;
+  }
+  .blog .blog-card-area {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 80px;
+  }
 }
 
 .ending {
