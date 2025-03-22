@@ -1,4 +1,5 @@
 .blog-card {
+  background-color: var(--color-bg);
   a {
     @extend %card-base;
     display: flex;
