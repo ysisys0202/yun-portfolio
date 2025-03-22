@@ -3,8 +3,8 @@
   max-width: $breakpoint-lg;
   border-radius: $radius-lg;
 
-  background-color: $beige;
-
+  background-color: var(--color-text);
+  color: var(--color-bg);
   &-title {
     @include text-style(title-4);
   }

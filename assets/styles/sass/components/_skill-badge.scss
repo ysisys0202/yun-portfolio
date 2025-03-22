@@ -4,8 +4,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: $blue;
-  color: $beige;
+  background-color: var(--color-text);
+  color: var(--color-bg);
   font-weight: 400;
   i {
     font-size: 18px;
