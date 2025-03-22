@@ -4,6 +4,8 @@
   }
 
   .project-box {
+    transform: scale(0.8);
+
     &:not(:first-of-type) {
       margin-top: 80px;
     }

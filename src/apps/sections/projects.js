@@ -38,7 +38,7 @@ export const projectsAnimation = () => {
 
             if (progress < 0.2) {
               scale = gsap.utils.mapRange(0, 0.2, 0.8, 1, progress);
-              opacity = gsap.utils.mapRange(0, 0.2, 0, 1, progress);
+              opacity = gsap.utils.mapRange(0, 0.2, 0.6, 1, progress);
             } else if (progress > 0.7) {
               scale = gsap.utils.mapRange(0.7, 1, 1, 0.8, progress);
               opacity = gsap.utils.mapRange(0.7, 1, 1, 0.6, progress);

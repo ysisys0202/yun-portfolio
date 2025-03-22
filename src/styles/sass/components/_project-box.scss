@@ -1,5 +1,5 @@
 .project-box {
-  padding: 80px 60px;
+  padding: 40px 30px;
   max-width: $breakpoint-lg;
   border-radius: $radius-lg;
 
@@ -41,5 +41,8 @@
     margin-bottom: 16px;
     font-family: $font-en;
     font-weight: 700;
+  }
+  @include responsive(md) {
+    padding: 80px 60px;
   }
 }
