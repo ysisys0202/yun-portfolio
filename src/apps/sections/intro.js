@@ -89,7 +89,7 @@ const introDesktopAnimation = () => {
           introTitle.bounce();
         });
         route.classList.add("is-hide");
-        // document.body.classList.add("no-scroll");
+        document.body.classList.add("no-scroll");
       },
     })
     .fromTo(
