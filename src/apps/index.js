@@ -9,14 +9,17 @@ import { endingAnimation } from "./sections/ending.js";
 import { routeAnimation } from "./sections/route.js";
 
 window.addEventListener("DOMContentLoaded", () => {
-  introAnimation();
-  titleAnimation();
-  aboutAnimation();
-  skillsAnimation();
-  projectsAnimation();
-  blogAnimation();
-  endingAnimation();
-  routeAnimation();
+  window.scrollTo(0, 0);
+  setTimeout(() => {
+    introAnimation();
+    titleAnimation();
+    aboutAnimation();
+    skillsAnimation();
+    projectsAnimation();
+    blogAnimation();
+    endingAnimation();
+    routeAnimation();
+  });
 });
 
 window.addEventListener(

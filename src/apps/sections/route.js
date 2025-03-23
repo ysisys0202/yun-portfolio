@@ -18,10 +18,20 @@ export const routeAnimation = () => {
 
         airplane.style.offsetDistance = `${offsetDistance}%`;
 
-        if (isScrollDown) {
+        if (progress === 0) {
           airplane.classList.remove("is-up");
         } else {
-          airplane.classList.add("is-up");
+          if (isScrollDown) {
+            airplane.classList.remove("is-up");
+          } else {
+            airplane.classList.add("is-up");
+          }
+        }
+
+        if (progress === 1) {
+          airplane.classList.add("is-arrival");
+        } else {
+          airplane.classList.remove("is-arrival");
         }
       },
     },
