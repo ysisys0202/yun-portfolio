@@ -1,6 +1,5 @@
 @mixin text-style($size, $color: false) {
   line-height: $line-height;
-  letter-spacing: $letter-spacing;
   @if ($size == "title-1") {
     font-size: $typography-title-1;
     font-weight: 700;
@@ -28,5 +27,16 @@
   }
   @if (type-of($color) == color) {
     color: $color;
+  }
+}
+
+@mixin font-style($lang) {
+  @if ($lang== "en") {
+    font-family: $font-en;
+    letter-spacing: $letter-spacing-en;
+  }
+  @if ($lang== "kr") {
+    font-family: $font-kr;
+    letter-spacing: $letter-spacing-kr;
   }
 }
