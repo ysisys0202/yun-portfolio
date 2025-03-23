@@ -2,11 +2,33 @@
   padding: 40px 30px;
   max-width: $breakpoint-lg;
   border-radius: $radius-lg;
-
   background-color: var(--color-text);
   color: var(--color-bg);
   &-title {
     @include text-style(title-4);
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    a {
+      @include text-style(text-2);
+      text-decoration: underline;
+    }
+  }
+  .notice {
+    margin-top: 20px;
+    @include text-style(text-2);
+    opacity: 0.8;
+  }
+  table {
+    margin-top: 16px;
+    @include text-style(text-2);
+    opacity: 0.8;
+    th,
+    td {
+      padding: 8px 16px;
+      border: 1px solid var(--color-bg);
+      text-align: left;
+    }
   }
   .project-detail {
     margin-top: 20px;
