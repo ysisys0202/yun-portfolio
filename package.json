@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite && sass --watch ./src/styles/sass:./src/styles/css",
-    "build": "vite build && sass ./src/styles/sass:./src/styles/css",
+    "build": "vite build",
     "serve": "vite preview"
   },
   "author": "이윤슬",
