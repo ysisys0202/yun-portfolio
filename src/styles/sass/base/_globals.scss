@@ -1,17 +1,19 @@
 :root {
   --color-text: #3a6ecf;
   --color-bg: #fff7e3;
+  --color-point: #3a6ecf;
 }
 
 .bg-blue {
   --color-text: #fff7e3;
   --color-bg: #3a6ecf;
+  --color-point: #ffd340;
 }
 
 html,
 body {
   @include text-style(text-2);
-  font-family: $font-ko;
+  @include font-style(kr);
   color: var(--color-text);
   @include responsive(md) {
     @include text-style(text-1);

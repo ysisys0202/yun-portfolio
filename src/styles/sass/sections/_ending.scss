@@ -4,6 +4,7 @@
   align-items: center;
   gap: 40px;
   padding: 200px 0 300px;
+  color: var(--color-point);
   a {
     @include text-style(title-4);
     text-decoration: underline;
