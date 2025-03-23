@@ -3,8 +3,8 @@
   z-index: 40;
   padding: 120px 20px;
   &-title {
+    @include font-style(en);
     @include text-style(title-3);
-    font-family: $font-en;
     text-align: center;
   }
   &-body {

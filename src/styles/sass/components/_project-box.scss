@@ -21,6 +21,7 @@
       margin-top: 16px;
     }
     h5 {
+      font-weight: 700;
       a {
         @include text-style(text-3);
         text-decoration: underline;
@@ -38,10 +39,10 @@
     }
   }
   .project-detail-title {
+    @include font-style(en);
     margin-bottom: 16px;
-    font-family: $font-en;
-    font-weight: 700;
   }
+
   @include responsive(md) {
     padding: 80px 60px;
   }
