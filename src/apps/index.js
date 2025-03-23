@@ -9,17 +9,16 @@ import { endingAnimation } from "./sections/ending.js";
 import { routeAnimation } from "./sections/route.js";
 
 window.addEventListener("DOMContentLoaded", () => {
-  window.scrollTo(0, 0);
-  setTimeout(() => {
-    introAnimation();
-    titleAnimation();
-    aboutAnimation();
-    skillsAnimation();
-    projectsAnimation();
-    blogAnimation();
-    endingAnimation();
-    routeAnimation();
-  });
+  window.history.scrollRestoration = "manual";
+
+  introAnimation();
+  titleAnimation();
+  aboutAnimation();
+  skillsAnimation();
+  projectsAnimation();
+  blogAnimation();
+  endingAnimation();
+  routeAnimation();
 });
 
 window.addEventListener(
