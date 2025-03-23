@@ -7,6 +7,7 @@ import { projectsAnimation } from "./sections/projects.js";
 import { blogAnimation } from "./sections/blog.js";
 import { endingAnimation } from "./sections/ending.js";
 import { routeAnimation } from "./sections/route.js";
+import "../styles/sass/index.scss";
 
 window.addEventListener("DOMContentLoaded", () => {
   window.history.scrollRestoration = "manual";
