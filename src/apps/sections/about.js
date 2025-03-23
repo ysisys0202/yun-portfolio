@@ -13,7 +13,7 @@ export const aboutAnimation = () => {
         duration: 0.4,
         scrollTrigger: {
           trigger: fadeinItem,
-          start: "top 60%",
+          start: "top 80%",
         },
       }
     );
