@@ -13,6 +13,9 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-link:before {
+  content: "\e90c";
+}
 .icon-arrow:before {
   content: "\e900";
 }
