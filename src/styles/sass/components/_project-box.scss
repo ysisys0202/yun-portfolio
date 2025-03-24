@@ -31,18 +31,15 @@
     }
   }
   .project-detail {
-    margin-top: 20px;
+    margin-top: 36px;
   }
-  .project-detail-list {
-    &:not(:first-of-type) {
-      margin-top: 32px;
-    }
-  }
+
   .project-detail-item {
     &:not(:first-of-type) {
-      margin-top: 16px;
+      margin-top: 8px;
     }
     h5 {
+      margin-top: 20px;
       font-weight: 700;
       a {
         @include text-style(text-3);
@@ -59,6 +56,14 @@
         margin-top: 8px;
       }
     }
+  }
+  .project-detail-preview-list {
+    display: flex;
+  }
+  .project-detail-preview-item {
+    flex-shrink: 0;
+    margin-left: -1px;
+    width: 33.3333%;
   }
   .project-detail-title {
     @include font-style(en);
