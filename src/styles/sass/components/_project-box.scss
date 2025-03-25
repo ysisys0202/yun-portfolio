@@ -1,14 +1,48 @@
+$spacing-side-sm: 30px;
+$spacing-vertical-sm: 40px;
+$spacing-side-md: 60px;
+$spacing-vertical-md: 80px;
+
 .project-box {
-  padding: 40px 30px;
   max-width: $breakpoint-lg;
   border-radius: $radius-lg;
   background-color: var(--color-text);
   color: var(--color-bg);
+
   a {
     text-decoration: underline;
     i {
       display: inline-block;
       margin-left: 4px;
+    }
+  }
+  &-header {
+    position: relative;
+    padding: $spacing-vertical-sm $spacing-side-sm
+      calc($spacing-vertical-sm / 2);
+    border-bottom: 2px dashed var(--color-bg);
+
+    &::before {
+      content: "";
+      width: 26px;
+      height: 26px;
+      background: var(--color-bg);
+      border-radius: 50%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translate(-50%, 50%);
+    }
+    &::after {
+      content: "";
+      width: 26px;
+      height: 26px;
+      background: var(--color-bg);
+      border-radius: 50%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translate(50%, 50%);
     }
   }
   &-title {
@@ -32,6 +66,9 @@
       border: 1px solid var(--color-bg);
       text-align: left;
     }
+  }
+  &-content {
+    padding: 0 $spacing-side-sm $spacing-vertical-sm;
   }
   .project-detail {
     margin-top: 36px;
@@ -61,11 +98,12 @@
   }
   .project-detail-preview-list {
     display: flex;
+    flex-direction: column;
   }
   .project-detail-preview-item {
-    flex-shrink: 0;
-    margin-left: -1px;
-    width: 33.3333%;
+    &:not(:first-of-type) {
+      margin-top: -1px;
+    }
   }
   .project-detail-title {
     @include font-style(en);
@@ -73,6 +111,38 @@
   }
 
   @include responsive(md) {
-    padding: 80px 60px;
+    &-header {
+      padding: calc($spacing-vertical-md / 2) $spacing-side-md;
+      &::before {
+        width: 40px;
+        height: 40px;
+      }
+      &::after {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    &-title {
+      @include text-style(title-3);
+    }
+    &-content {
+      padding: 0 $spacing-side-md $spacing-vertical-md;
+    }
+    .project-detail-preview-list {
+      flex-direction: row;
+    }
+    .project-detail-preview-item {
+      flex-shrink: 0;
+      margin-top: 0;
+      margin-left: -1px;
+      width: 33.3333%;
+      &:not(:first-of-type) {
+        margin-top: 0;
+      }
+    }
+    .project-detail-title {
+      @include font-style(en);
+      margin-bottom: 16px;
+    }
   }
 }
