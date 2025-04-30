@@ -106,7 +106,6 @@ $spacing-vertical-md: 80px;
     }
   }
   .project-detail-title {
-    @include font-style(en);
     margin-bottom: 16px;
   }
 
@@ -139,10 +138,6 @@ $spacing-vertical-md: 80px;
       &:not(:first-of-type) {
         margin-top: 0;
       }
-    }
-    .project-detail-title {
-      @include font-style(en);
-      margin-bottom: 16px;
     }
   }
 }
