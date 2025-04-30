@@ -223,21 +223,7 @@
             </header>
             <div class="project-box-content">
               <div class="project-detail">
-                <h4 class="project-detail-title">Overview</h4>
-                <ul class="project-detail-list">
-                  <li class="project-detail-item">
-                    <i class="icon-twinkle"></i>
-                    비즈니스 방향 전환에 따른 전면적인 UI 개편 진행.
-                  </li>
-                  <li class="project-detail-item">
-                    <i class="icon-twinkle"></i>
-                    하드코딩 되어 있던 섹션을 제거하고 API를 통해 받아온
-                    데이터를 통해 자사 포트폴리오 및 상품 리스트 노출.
-                  </li>
-                </ul>
-              </div>
-              <div class="project-detail">
-                <h4 class="project-detail-title">Results & Lessons Learned</h4>
+                <h4 class="project-detail-title">주요 작업</h4>
                 <ul class="project-detail-list">
                   <li class="project-detail-item">
                     <h5>1. UI 개편에 따른 리액트 컴포넌트 개발</h5>
@@ -245,22 +231,53 @@
                       <li>
                         <i class="icon-twinkle"></i>
                         버튼, 타이포그라피와 같은 가장 작은 단위의 컴포넌트 개발
-                        시 재사용성을 고려하여 기능과 스타일을 분리. HTML
-                        Element의 속성을 모두 Props로 전달하여 ‘스타일이 입혀진
-                        HTML Element’ 처럼 사용할 수 있도록 지원.
+                        시 재사용성을 고려하여 기능과 스타일을 분리. <br />
+                        HTML Element의 속성을 모두 Props로 전달하여 ‘스타일이
+                        입혀진 HTML Element’ 처럼 사용할 수 있도록 지원.
                       </li>
                       <li>
                         <i class="icon-twinkle"></i>
-                        아코디언, 탭 메뉴와 같은 컴포넌트 구현 시 컴파운드d
-                        패턴을 통해 Props Drilling을 피하고 유연하게 UI를 조합할
-                        수 있도록 지원하여 코드 확장성을 높임.
+                        컴파운드 패턴을 통해 아코디언, 탭 메뉴 컴포넌트 구현.
+                        <br />Props Drilling을 피하고 유연하게 UI를 조합할 수
+                        있도록 지원하여 코드 확장성을 높임.
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="project-detail-item">
+                    <h5>2. 메인 페이지 화면 개발</h5>
+                    <ul>
+                      <li>
+                        <i class="icon-twinkle"></i>
+                        하드코딩 되어 있던 섹션을 제거하고 API를 통해 받아온
+                        데이터를 통해 자사 포트폴리오 및 상품 리스트 노출.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="project-detail">
+                <h4 class="project-detail-title">트러블 슈팅 및 최적화</h4>
+                <ul class="project-detail-list">
+                  <li class="project-detail-item">
+                    <h5>1. 다양한 케이스에 대응 가능한 컴포넌트 개발</h5>
+                    <ul>
+                      <li>
+                        <i class="icon-twinkle"></i>
+                        문제 상황 : 상품 카드 컴포넌트 개발 시 페이지, 섹션에
+                        따라 구성 요소가 조금씩 달라지는 케이스 발생.
+                        <br />
+                        props를 통한 조건부 렌더링으로 컴포넌트를 구현하다보니
+                        코드 복잡성 증가.
                       </li>
                       <li>
                         <i class="icon-twinkle"></i>
-                        상품 카드 컴포넌트 개발 시 페이지, 섹션에 따라 구성
-                        요소가 조금씩 달라져 컴포넌트의 복잡성 증가. 아토믹
-                        디자인 패턴을 도입하여 분리한 컴포넌트를 조합하는
-                        방식으로 코드 복잡성을 낮추고 재사용성을 높임.
+                        해결 방안 : 아토믹 디자인 패턴을 도입하여 컴포넌트를
+                        분리.
+                      </li>
+                      <li>
+                        <i class="icon-twinkle"></i>
+                        효과: 원하는 케이스에 맞게 컴포넌트를 조합하여 코드
+                        복잡성을 낮추고 재사용성을 높임.
                       </li>
                     </ul>
                   </li>
@@ -269,37 +286,18 @@
                     <ul>
                       <li>
                         <i class="icon-twinkle"></i>
-                        데이터 로딩 시 스켈레톤 UI를 통해 Layout Shift를
-                        방지하여 브라우저 렌더링 성능을 최적화.
+                        문제 상황 : 데이터 로딩 후 UI 렌더링 시 화면이 아래로
+                        밀리는 Layout Shift 현상 발생.
                       </li>
                       <li>
                         <i class="icon-twinkle"></i>
-                        로딩 UI를 통해 현재 페이지에서 진행 중인 작업을
-                        사용자에게 명확히 전달하여 사용자 경험을 개선하고 페이지
-                        이탈 방지.
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="project-detail-item">
-                    <h5>3. 커뮤니케이션</h5>
-                    <ul>
-                      <li>
-                        <i class="icon-twinkle"></i>
-                        함께 프로젝트를 진행한 디자이너님께서 HTML, CSS에 대한
-                        이해도가 높아 원활한 커뮤니케이션을 통해 디자인과 개발이
-                        일관되게 적용될 수 있도록 조율할 수 있었음.
+                        해결 방안 : 스켈레톤 UI를 통해 페이지 밀림을 방지하고
+                        현재 페이지가 로딩 상태임을 표시함.
                       </li>
                       <li>
                         <i class="icon-twinkle"></i>
-                        타 직군과의 원활한 의사소통을 통해 스토리북을 도입하여
-                        컴포넌트 구현 사항 공유.
-                      </li>
-                      <li>
-                        <i class="icon-twinkle"></i>
-                        해당 프로젝트를 통해 타 직군과의 원활한 의사소통을 위한
-                        지식의 중요성 인식. 이후 개인 프로젝트에서 Express로 API
-                        서버를 구축해보며 백엔드 지식을 학습하여 전반적인 개발
-                        프로세스에 대한 이해도를 높임.
+                        효과 : Layout Shift를 방지하여 브라우저 렌더링 성능을
+                        최적화하고 사용자 경험을 개선.
                       </li>
                     </ul>
                   </li>
@@ -315,72 +313,74 @@
             </header>
             <div class="project-box-content">
               <div class="project-detail">
-                <h4 class="project-detail-title">Overview</h4>
-                <ul class="project-detail-list">
-                  <li class="project-detail-item">
-                    <i class="icon-twinkle"></i>
-                    자사 인테리어 포트폴리오 노출 및 공유하기를 통한 바이럴
-                    마케팅을 목적으로 한 이상형 월드컵 토너먼트 페이지 제작.
-                  </li>
-                  <li class="project-detail-item">
-                    <i class="icon-twinkle"></i>
-                    API를 통해 전달받은 16개의 인테리어 포트폴리오 사진을
-                    랜덤으로 토너먼트 매치한 후 최종 결과 페이지로 랜딩시키는
-                    작업 진행.
-                  </li>
-                  <li class="project-detail-item">
-                    <i class="icon-twinkle"></i>
-                    결과 페이지에서 최종으로 선택한 인테리어에 사용된 상품
-                    정보와 연관있는 포트폴리오 이미지를 노출하고, 링크,
-                    카카오톡을 통한 공유하기 기능을 지원함.
-                  </li>
-                </ul>
-              </div>
-              <div class="project-detail">
-                <h4 class="project-detail-title">Results & Lessons Learned</h4>
+                <h4 class="project-detail-title">주요 작업</h4>
                 <ul class="project-detail-list">
                   <li class="project-detail-item">
                     <h5>1. 이상형 월드컵 토너먼트 로직 구현</h5>
-                  </li>
-                  <li class="project-detail-item">
-                    <h5>2. 액션 기반의 상태 관리를 통한 렌더링 최적화</h5>
                     <ul>
                       <li>
                         <i class="icon-twinkle"></i>
-                        초기 작업 시 서로 의존성이 있는 상태를 useState로
-                        관리하여 useEffect가 남발되어 빈번한 리렌더링이 발생.
+                        API를 통해 전달받은 16개의 인테리어 포트폴리오 사진을
+                        랜덤으로 토너먼트 매치한 후 최종 결과 페이지로
+                        랜딩시키는 작업 진행.
                       </li>
                       <li>
                         <i class="icon-twinkle"></i>
-                        useReducer를 사용하여 토너먼트 중인 포트폴리오 선택,
-                        라운드 변경 등 액션에 따라 상태를 관리.
-                      </li>
-                      <li>
-                        <i class="icon-twinkle"></i>
-                        불필요한 상태를 제거하고 코드 구조를 단순화하며 코드의
-                        가독성을 향상시키고 렌더링 최적화.
+                        결과 페이지에서 최종으로 선택한 인테리어에 사용된 상품
+                        정보와 연관있는 포트폴리오 이미지를 노출하고, 링크,
+                        카카오톡을 통한 공유하기 기능을 지원함.
                       </li>
                     </ul>
                   </li>
                   <li class="project-detail-item">
-                    <h5>3. 사용자 경험 개선</h5>
+                    <h5>2. 애니메이션 구현</h5>
                     <ul>
                       <li>
                         <i class="icon-twinkle"></i>
                         토너먼트 매치 시 사용자가 선택한 포트폴리오를 명확히
-                        인지할 수 있도록 애니메이션 효과를 제안하고, Framer
-                        Motion을 사용하여 애니메이션 구현.
+                        인지할 수 있도록 애니메이션 효과를 제안하고 framer
+                        motion을 사용하여 fade in, fade out 애니메이션 구현.
                       </li>
                     </ul>
                   </li>
                   <li class="project-detail-item">
-                    <h5>4. 목적에 따른 코드 분리를 통한 개발 생산성 향상</h5>
+                    <h5>3. 토너먼트 결과 페이지 개발</h5>
                     <ul>
                       <li>
                         <i class="icon-twinkle"></i>
-                        이전 프로젝트에서 공유하기 기능을 커스텀 훅으로
-                        분리해두어 해당 프로젝트에서 빠르게 공유하기 기능을
-                        적용하여 작업 시간 단축.
+                        API 서버에 최종 선택된 포트폴리오에 해당하는 결과
+                        데이터를 요청하여 화면 렌더링.
+                      </li>
+                      <li>
+                        <i class="icon-twinkle"></i>
+                        미리 구현한 커스텀 훅을 사용하여 빠르게 공유하기 기능을
+                        적용. 작업 시간을 단축하여 개발 생산성 향상.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="project-detail">
+                <h4 class="project-detail-title">트러블 슈팅 및 최적화</h4>
+                <ul class="project-detail-list">
+                  <li class="project-detail-item">
+                    <h5>1. 액션 기반의 상태 관리를 통한 렌더링 최적화</h5>
+                    <ul>
+                      <li>
+                        <i class="icon-twinkle"></i>
+                        문제 상황 : 초기 작업 시 서로 의존성이 있는 상태를
+                        useState로 관리하여 useEffect가 남발되어 빈번한
+                        리렌더링이 발생.
+                      </li>
+                      <li>
+                        <i class="icon-twinkle"></i>
+                        해결 방안 : useReducer를 사용하여 토너먼트 중인
+                        포트폴리오 선택, 라운드 변경 등 액션에 따라 상태를 관리.
+                      </li>
+                      <li>
+                        <i class="icon-twinkle"></i>
+                        효과 : 불필요한 상태를 제거하고 코드 구조를 단순화하며
+                        코드의 가독성을 향상시키고 렌더링 최적화.
                       </li>
                     </ul>
                   </li>
@@ -413,25 +413,6 @@
               </table>
             </header>
             <div class="project-box-content">
-              <div class="project-detail">
-                <h4 class="project-detail-title">Overview</h4>
-                <ul class="project-detail-list">
-                  <li class="project-detail-item">
-                    <i class="icon-twinkle"></i>
-                    책에 관련된 기록을 쉽게 남길 수 있는 독서 기록 플랫폼 구현.
-                  </li>
-                  <li class="project-detail-item">
-                    <i class="icon-twinkle"></i>
-                    로그인을 통해 인증된 사용자가 독서 기록을 생성, 수정, 조회,
-                    삭제할 수 있도록 지원함.
-                  </li>
-                  <li class="project-detail-item">
-                    <i class="icon-twinkle"></i>
-                    책 정보를 손수 기입하지 않아도 되도록 책 검색 기능을 통해 책
-                    정보 자동 기입 기능 제공.
-                  </li>
-                </ul>
-              </div>
               <div class="project-detail">
                 <h4 class="project-detail-title">Preview</h4>
                 <ul class="project-detail-preview-list">
@@ -479,7 +460,7 @@
                 </ul>
               </div>
               <div class="project-detail">
-                <h4 class="project-detail-title">Results & Lessons Learned</h4>
+                <h4 class="project-detail-title">주요 작업</h4>
                 <ul class="project-detail-list">
                   <li class="project-detail-item">
                     <h5>
@@ -491,6 +472,13 @@
                         >(깃허브 <i class="icon-link"></i>)</a
                       >
                     </h5>
+                    <ul>
+                      <li>
+                        <i class="icon-twinkle"></i>
+                        버튼, 타이포그라피, 아코디언 등의 공용 컴포넌트 개발 및
+                        ESBuild를 사용한 번들링 작업.
+                      </li>
+                    </ul>
                   </li>
                   <li class="project-detail-item">
                     <h5>
@@ -520,22 +508,32 @@
                         React Query의 useInfinityQuery를 사용한 무한 스크롤
                         구현.
                       </li>
-                      <li>
-                        <i class="icon-twinkle"></i>
-                        페이지 이동 시 딜레이가 생겨 Next.js의 스트리밍을
-                        사용하여 최적화.
-                      </li>
                     </ul>
                   </li>
+                </ul>
+              </div>
+              <div class="project-detail">
+                <h4 class="project-detail-title">트러블 슈팅 및 최적화</h4>
+                <ul class="project-detail-list">
                   <li class="project-detail-item">
-                    <h5>
-                      3. 데이터 통신을 위한 Express API 서버 구축
-                      <a
-                        href="https://github.com/ysisys0202/chak-api"
-                        target="_blank"
-                        >(깃허브 <i class="icon-link"></i>)</a
-                      >
-                    </h5>
+                    <h5>1. Next.js 스트리밍을 통한 페이지 라우팅 속도 개선</h5>
+                    <ul>
+                      <li>
+                        <i class="icon-twinkle"></i>
+                        문제 상황 : 데이터를 동적으로 불러오는 SSR 시 페이지
+                        라우팅 시 0.5 ~ 1 초 정도의 딜레이 발생
+                      </li>
+                      <li>
+                        <i class="icon-twinkle"></i>
+                        해결 방안 : Next.js에서 제공하는 스트리밍 기능을 사용.
+                        Suspense를 통해 로딩 UI 제공.
+                      </li>
+                      <li>
+                        <i class="icon-twinkle"></i>
+                        효과 : 데이터 로딩 시 먼저 완성된 UI를 렌더링하여 라우팅
+                        속도 개선.
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </div>
